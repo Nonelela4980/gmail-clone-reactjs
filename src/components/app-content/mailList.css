@@ -1,0 +1,64 @@
+.mail-list{
+    flex:1;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #3c4043 !important;
+    border-bottom: 2px solid whitesmoke;
+    position: sticky;
+    top:0;
+    z-index: 9999; /**On top*/
+}
+.left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.select{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.select-more{
+    border-radius: 1px !important;
+    padding: 3px !important;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    min-width: 228px;
+    padding: 8px 0;
+    color: grey;
+   
+}
+.social:hover{
+    cursor: pointer;
+    background-color: whitesmoke;
+    color:black;
+     /* border-bottom: 3px solid whitesmoke; */
+}
+.selected-solial{
+    border-width: 3px !important;
+}
+.social > h4{
+    font-size: 14px;
+}
+
+.socials{
+    /* position:sticky;
+    top: 0; */
+    display: flex;
+    /* border-bottom: 1px solid whitesmoke; */
+    background-color: white;
+    z-index: 999;
+
+}
+

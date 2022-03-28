@@ -1,0 +1,137 @@
+/*Scrollbar with*/
+::-webkit-scrollbar {
+    width: 8px;
+    
+  }
+  
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 25px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 25px;
+  }
+  
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+.sidebar{
+    padding: 20px;
+    width: 250px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* border:2px solid; */
+    position:sticky;
+    left: 0;
+    top: 0;
+
+}
+.sidebar-bottom{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sidebar-bottom-bottom{
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    border-bottom: 2px solid whitesmoke;
+}
+.title{
+    font-size: 0.875rem;
+    font-weight: 500;
+    color:#202124;
+    margin-left: 0.52rem;
+}
+.sidebar-bottom-top{
+    height: 150px;
+    overflow: hidden;
+    border-top: 2px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+}
+.sidebar-bottom-top:hover{
+    overflow-y: scroll;
+}
+
+.compose-button{
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+   width: 100px;
+    height: 45px;
+    padding: 0 24px 0 0;
+    display: flex;
+    align-items: center;
+    color:#202124;
+    border-radius: 25px;
+    justify-content: center;
+    font-weight: 500;
+    letter-spacing: .25px;
+    background-color: #fff;
+    /* font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif; */
+}
+.compose-button:hover{
+    box-shadow: 0 5px 15px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%);
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: #fafafb;
+    cursor: pointer;
+}
+
+/**sidebar tools*/
+.tool{
+    color:rgba(0, 0, 0, 0.54);
+    line-height: 20px;
+    height: 18px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    /* background-color: rgb(248, 104, 104); */
+    border-radius: 25px;
+    
+}
+.tool:hover{
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+.tool > div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex:1
+}
+
+.groups{
+    border-bottom: 2px solid whitesmoke;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.groups:hover{
+    cursor: pointer;
+}
+.groups:hover > .addIcon{
+    color: #3c4043 !important;
+}
+.person{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.person-control{
+    display: flex;
+    align-items: center;
+   gap:5px
+}
+.person-control > span{
+    font-size: 13px;
+}

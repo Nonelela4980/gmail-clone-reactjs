@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
-
+import MailList from './components/app-content/mailList';
+import Sidebar from './components/app-content/sidebar';
+import Header from './components/header/header';
+import {BrowserRouter as Router,
+  Routes,
+  Route,} from 'react-router-dom'
+import Email from './components/app-content/email';
+import SendEmail from './components/app-content/sendEmail';
+import {selectComposeMessage} from './features/composeSlice';
+import { useSelector } from 'react-redux';
 function App() {
+
+  const composeMessageIsOpen=useSelector(selectComposeMessage);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+      <Header/>
+      <div className="app-content">
+          <Sidebar/>
+         <Routes>
+            <Route path="/" element={<MailList/>}></Route>
+            <Route path='email' element={<Email/>}></Route>
+         </Routes>
+         {composeMessageIsOpen && <SendEmail/>}
+        </div>
+    </Router>
     </div>
   );
 }
